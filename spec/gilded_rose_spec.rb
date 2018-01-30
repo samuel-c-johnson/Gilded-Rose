@@ -10,10 +10,16 @@ describe GildedRose do
       expect(items[0].name).to eq "foo"
     end
 
-    it 'equals 4' do
-      maths = 2+2
-      expect(maths).to eq(4)
+    it "reduces the sell in value by 1 each day" do
+      item = Item.new("item", 5, 10)
+      items = [item]
+      gilded_rose = GildedRose.new(items)
+      gilded_rose.update_quality
+      expect(item.sell_in).to eq(4)
     end
+
+    
+
   end
 
 end
