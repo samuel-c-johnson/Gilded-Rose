@@ -1,14 +1,13 @@
 require './item.rb'
 
-class Legendary_Item < Item
-  attr_reader :item
+class LegendaryItem < Item
 
   MAX_QUALITY = 80
 
-  def initialize(item)
-    @item = item
+  def update_quality
+
   end
 
-  
+
 
 end
