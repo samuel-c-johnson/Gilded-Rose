@@ -1,8 +1,11 @@
-require './item.rb'
+require 'item'
 
 class AgedBrie
-  attr_accessor :item
-
   MAX_QUALITY = 50
-  MIN_QUALITY = 0
+
+
+  def update_quality
+    @sell_in > 0 && @quality < MAX_QUALITY ? @quality += 1 : @quality
+  end
+
 end
